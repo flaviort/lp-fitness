@@ -1,0 +1,80 @@
+/*----------------------------------------
+------------------------------------------
+	## POPUPS
+------------------------------------------
+----------------------------------------*/
+
+.popup {
+    display: none;
+    max-width: calc(100% - 40px);
+
+    &.hire-me {
+        form {
+            .input-field {
+                display: block;
+                margin-top: 0;
+                margin-bottom: 30px;
+
+                @media #{$mq-lg-max} {
+                    margin-bottom: 20px;
+                }
+
+                input,
+                textarea {
+                    color: $gray-medium;
+                } // END INPUT / TEXTAREA
+            } // END INPUT FIELD
+
+            .pink-button {
+                margin-top: 20px;
+
+                @media #{$mq-sm-max} {
+                    margin-top: 10px;
+                }
+            } // END PINK BUTTON
+        } // END FORM
+    } // END HIRE ME
+
+    .box {
+        width: 1100px;
+        max-width: 100%;
+        text-align: center;
+        padding: 50px 100px;
+
+        @media #{$mq-sm-max} {
+            padding: 40px 60px;
+        }
+
+        @media #{$mq-xs-max} {
+            padding: 40px 30px;
+        }
+
+        @media #{$mq-xxs-max} {
+            padding: 30px 20px;
+        }
+
+        .title-big {
+            color: $pink;
+        } // END TITLE BIG
+
+        .desc {
+            display: block;
+            margin: 30px auto;
+            color: $gray-medium;
+
+            @media #{$mq-xs-max} {
+                margin: 20px auto 30px auto;
+            }
+        } // END DESC
+
+        .pink-button {
+            @media #{$mq-xs-max} {
+                display: block;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+            }
+        } // END PINK BUTTON
+    } // END BOX
+} // END POPUP

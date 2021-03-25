@@ -439,19 +439,19 @@
 								<div class="col-md-6 left">
 
 									<div class="input-field">
-										<input id="name" type="text" class="validate text-medium" required>
-										<label for="name" class="text-medium">Name</label>
-				        			</div>
+										<input id="contact-name" type="text" class="validate text-medium" required>
+										<label for="contact-name" class="text-medium">Name *</label>
+									</div>
 
-				        			<div class="input-field">
-										<input id="email" type="email" class="validate text-medium" required>
-										<label for="email" class="text-medium">Email</label>
-				        			</div>
+									<div class="input-field">
+										<input id="contact-email" type="email" class="validate text-medium" required>
+										<label for="contact-email" class="text-medium">Email *</label>
+									</div>
 
-				        			<div class="input-field">
-										<input id="phone" type="text" class="text-medium">
-										<label for="phone" class="text-medium">Phone</label>
-				        			</div>
+									<div class="input-field">
+										<input id="contact-phone" type="text" class="text-medium">
+										<label for="contact-phone" class="text-medium">Phone</label>
+									</div>
 									
 								</div><!-- END COL / LEFT -->
 
@@ -459,17 +459,18 @@
 								<div class="col-md-6 right">
 
 									<div class="input-field">
-										<textarea id="message" class="materialize-textarea validate text-medium" required></textarea>
-										<label for="message" class="text-medium">Message</label>
-				        			</div>
+										<textarea id="contact-message" class="materialize-textarea validate text-medium" required></textarea>
+										<label for="contact-message" class="text-medium">Message *</label>
+									</div>
 									
 								</div><!-- END COL / RIGHT -->
 
 								<!-- COL / LAST -->
 								<div class="col-12 last">
 
-									<input type="submit" id="submit" style="display: none;">
-									<label for="submit" class="pink-button hvr-bounce-to-right">Submit</label>
+									<input type="submit" id="contact-submit" style="display: none;">
+									<!--label for="contact-submit" class="pink-button hvr-bounce-to-right">Submit</label-->
+									<a href="#popup-success" data-fancybox class="pink-button hvr-bounce-to-right">Submit</a>
 									
 								</div><!-- END COL / LAST -->
 
@@ -482,6 +483,9 @@
 
 			<!-- SECTION / FOOTER -->
 			<?php include('includes/footer.php'); ?>
+
+			<!-- POPUPS -->
+			<?php include('includes/popups.php'); ?>
 
 			<!-- FOOTER-->
 			<footer>

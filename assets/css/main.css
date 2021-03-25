@@ -877,6 +877,60 @@ button:focus {
         text-align: center;
         padding-top: 10px; } }
 
+/*----------------------------------------
+------------------------------------------
+	## POPUPS
+------------------------------------------
+----------------------------------------*/
+.popup {
+  display: none;
+  max-width: calc(100% - 40px); }
+  .popup.hire-me form .input-field {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 30px; }
+    @media only screen and (max-width: 1200px) {
+      .popup.hire-me form .input-field {
+        margin-bottom: 20px; } }
+    .popup.hire-me form .input-field input,
+    .popup.hire-me form .input-field textarea {
+      color: #666; }
+  .popup.hire-me form .pink-button {
+    margin-top: 20px; }
+    @media only screen and (max-width: 767px) {
+      .popup.hire-me form .pink-button {
+        margin-top: 10px; } }
+  .popup .box {
+    width: 1100px;
+    max-width: 100%;
+    text-align: center;
+    padding: 50px 100px; }
+    @media only screen and (max-width: 767px) {
+      .popup .box {
+        padding: 40px 60px; } }
+    @media only screen and (max-width: 575px) {
+      .popup .box {
+        padding: 40px 30px; } }
+    @media only screen and (max-width: 420px) {
+      .popup .box {
+        padding: 30px 20px; } }
+    .popup .box .title-big {
+      color: #e12a55; }
+    .popup .box .desc {
+      display: block;
+      margin: 30px auto;
+      color: #666; }
+      @media only screen and (max-width: 575px) {
+        .popup .box .desc {
+          margin: 20px auto 30px auto; } }
+    @media only screen and (max-width: 575px) {
+      .popup .box .pink-button {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center; } }
+
 /* PAGES */
 /*----------------------------------------
 ------------------------------------------
