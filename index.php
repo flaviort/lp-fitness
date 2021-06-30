@@ -362,25 +362,28 @@
 
 					<!-- BOTTOM -->
 					<div class="bottom">
-						<form action="https://lepimentafit.us6.list-manage.com/subscribe/post-json?u=2f098fa901cb1ad2b3fe39688&id=34ed35c84a&c=?" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+						<form id="contact-bottom" action="https://lepimentafit.com/mailchimpv3/subscribe.php" method="post">
+
+							<input type="hidden" id="TagID" name="TagID" value="contact">
+
 							<div class="row">
 
 								<!-- COL / LEFT -->
 								<div class="col-md-6 left">
 
 									<div class="input-field wow fadeIn">
-										<input type="text" id="mce-NAME" name="NAME" class="validate text-medium" required>
-										<label for="mce-NAME" class="text-medium">Name *</label>
+										<input type="text" id="name" name="name" class="validate text-medium" required>
+										<label for="name" class="text-medium">Name *</label>
 									</div>
 
 									<div class="input-field wow fadeIn">
-										<input type="email" id="mce-EMAIL" name="EMAIL" class="validate text-medium" required>
-										<label for="mce-EMAIL" class="text-medium">Email *</label>
+										<input type="email" id="email" name="email" class="validate text-medium" required>
+										<label for="email" class="text-medium">Email *</label>
 									</div>
 
 									<div class="input-field wow fadeIn">
-										<input type="text" id="mce-PHONE" name="PHONE" class="text-medium">
-										<label for="mce-PHONE" class="text-medium">Phone</label>
+										<input type="text" id="phone" name="phone" class="text-medium">
+										<label for="phone" class="text-medium">Phone</label>
 									</div>
 									
 								</div><!-- END COL / LEFT -->
@@ -389,8 +392,8 @@
 								<div class="col-md-6 right">
 
 									<div class="input-field wow fadeIn">
-										<textarea class="materialize-textarea validate text-medium" id="mce-MESSAGE" name="MESSAGE" required></textarea>
-										<label for="mce-MESSAGE" class="text-medium">Message *</label>
+										<textarea class="materialize-textarea validate text-medium" id="message" name="message" required></textarea>
+										<label for="message" class="text-medium">Message *</label>
 									</div>
 									
 								</div><!-- END COL / RIGHT -->
@@ -406,6 +409,8 @@
 
 							</div><!-- END ROW -->
 						</form><!-- END FORM -->
+
+						<div id="subscribe-result"></div>
 					</div><!-- END BOTTOM -->
 
 				</div><!-- END CONTAINER -->
@@ -421,6 +426,7 @@
 			<footer>
 				<script src="assets/js/framework.js"></script>
 				<script src="assets/js/functions.js" defer></script>
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 				<script src="assets/js/home.js" defer></script>
 			</footer>
 

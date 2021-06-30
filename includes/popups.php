@@ -11,7 +11,9 @@
 		</p>
 
 		<!-- FORM -->
-		<form action="">
+		<form id="standard-form" action="https://lepimentafit.com/mailchimpv3/subscribe.php" method="post">
+
+			<input type="hidden" id="TagStandardID" name="TagStandardID" value="standard">
 
 			<div class="input-field">
 				<input id="hire-standard-name" type="text" class="validate text-medium" required>
@@ -29,8 +31,8 @@
 			</div>
 
 			<input type="submit" id="hire-standard-submit" style="display: none;">
-			<!--label for="hire-standard-submit" class="text-medium pink-button">Submit</label-->
-			<a class="text-medium pink-button" href="#popup-success" data-fancybox onclick="$.fancybox.close()">Submit</a>
+			<label for="hire-standard-submit" class="text-medium pink-button hvr-bounce-to-right" onclick="$.fancybox.close()">Submit</label>
+			<!-- <a class="text-medium pink-button hvr-bounce-to-right" href="#popup-success" data-fancybox onclick="$.fancybox.close()">Submit</a> -->
 			
 		</form><!-- END FORM -->
 
@@ -50,7 +52,9 @@
 		</p>
 
 		<!-- FORM -->
-		<form action="">
+		<form id="premium-form" action="https://lepimentafit.com/mailchimpv3/subscribe.php" method="post">
+
+			<input type="hidden" id="TagPremiumID" name="TagPremiumID" value="premium">
 
 			<div class="input-field">
 				<input id="hire-premium-name" type="text" class="validate text-medium" required>
@@ -68,8 +72,8 @@
 			</div>
 
 			<input type="submit" id="hire-premium-submit" style="display: none;">
-			<!--label for="hire-premium-submit" class="text-medium pink-button" onclick="$.fancybox.close()">Submit</label-->
-			<a class="text-medium pink-button" href="#popup-error" data-fancybox onclick="$.fancybox.close()">Submit</a>
+			<label for="hire-premium-submit" class="text-medium pink-button hvr-bounce-to-right" onclick="$.fancybox.close()">Submit</label>
+			<!-- <a class="text-medium pink-button hvr-bounce-to-right" href="#popup-error" data-fancybox onclick="$.fancybox.close()">Submit</a> -->
 			
 		</form><!-- END FORM -->
 
@@ -89,7 +93,7 @@
 			I'll get back to you shortly.
 		</p>
 		
-		<button class="text-medium pink-button" onclick="$.fancybox.close()">
+		<button class="text-medium pink-button hvr-bounce-to-right" onclick="$.fancybox.close()">
 			Close
 		</button>
 
@@ -109,7 +113,7 @@
 			Please try again later.
 		</p>
 
-		<button class="text-medium pink-button" onclick="$.fancybox.close()">
+		<button class="text-medium pink-button hvr-bounce-to-right" onclick="$.fancybox.close()">
 			Close
 		</button>
 

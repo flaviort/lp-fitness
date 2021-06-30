@@ -455,9 +455,6 @@ br {
 p, a, h1, h2, h3, li, span, button, br, b, strong {
   font-family: sans-serif; }
 
-button:focus {
-  background-color: transparent; }
-
 .body-overflow {
   overflow: hidden; }
 
@@ -1009,6 +1006,8 @@ button:focus {
       @media only screen and (max-width: 575px) {
         .popup .box .desc {
           margin: 20px auto 30px auto; } }
+    .popup .box label.error {
+      display: none !important; }
     @media only screen and (max-width: 575px) {
       .popup .box .pink-button {
         display: block;
@@ -1923,6 +1922,8 @@ body.home #contact-me {
         height: 100%;
         display: block;
         min-height: 100%; }
+      body.home #contact-me .bottom form .input-field label.error {
+        display: none !important; }
     body.home #contact-me .bottom form .right .input-field {
       height: calc(100% - 58px); }
       @media only screen and (max-width: 1200px) {

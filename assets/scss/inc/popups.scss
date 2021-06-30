@@ -68,6 +68,10 @@
             }
         } // END DESC
 
+        label.error {
+            display: none!important;
+        } // END LABEL / ERROR
+
         .pink-button {
             @media #{$mq-xs-max} {
                 display: block;

@@ -51,20 +51,6 @@ $(document).ready(function() {
    		e.stopImmediatePropagation();
 	});
 
-	// FANCYBOX
-	$('[data-fancybox]').fancybox({
-		toolbar : true,
-		smallBtn : false,
-		arrows: true,
-		autoFocus: false,
-		touch: false,
-		buttons : [
-			'close'
-		],
-		animationEffect : "zoom-in-out",
-		transitionEffect : "circular",
-	}); // END FANCYBOX
-
 	// OPEN FS MENU
 	$("#top-menu #open-fs, #floating-fs").click(function(){
 		$("body").addClass('no-scroll');
@@ -124,52 +110,20 @@ $(document).ready(function() {
 		center: true,
 	});
 
+	// FANCYBOX
+	window.fancybox_settings = {
+		toolbar : true,
+		smallBtn : false,
+		arrows: true,
+		touch: false,
+		autoFocus: false,
+		buttons : [
+			'close'
+		],
+		animationEffect : "zoom-in-out",
+		transitionEffect : "circular"
+	}; // END FANCYBOX
+
+	$.extend($.fancybox.defaults, fancybox_settings);
+
 });
-
-var $form = $('#mc-embedded-subscribe-form');
-
-if ($form.length > 0) {
-	$('#mc-embedded-subscribe').bind('click', function (event) {
-		if (event) {
-			if($('#mce-NAME').val().length === 0 ) {
-				$('#mce-NAME').focus();
-			} else if($('#mce-EMAIL').val().length === 0 ) {
-				$('#mce-EMAIL').focus();
-			} else if($('#mce-MESSAGE').val().length === 0 ) {
-				$('#mce-MESSAGE').focus();
-			} else {
-				register($form);
-			}
-		}
-	})
-};
-
-function register($form) {
-	$('#mc-embedded-subscribe-form').val('Sending...');
-	$.ajax({
-		type: $form.attr('method'),
-		url: $form.attr('action'),
-		data: $form.serialize(),
-		dataType: 'json',
-		contentType: 'application/json; charset=utf-8',
-		error: function (resp, text) {
-			console.log('mailchimp ajax submit error: ' + text);
-		},
-		success: function (t) {
-			$('#mc-embedded-subscribe-form').val('SUBMIT')
-			if (t.result === 'success') {
-				console.log(t.msg);
-				$("#subscribe-result p").html(t.msg);
-				$("#mce-NAME").val("");
-				$("#mce-EMAIL").val("");
-				$("#mce-PHONE").val("");
-				$("#mce-MESSAGE").val("");
-			} else {
-				console.log(t.msg);
-				$("#subscribe-result p").css("color", "#412963"), 0 != t.msg.substring(0, 1) ? 
-				$("#subscribe-result p").html("E-mail already registered, thank you!") : 
-				$("#subscribe-result p").html("Please insert a email!");
-			}
-		}
-	});
-};

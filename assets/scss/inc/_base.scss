@@ -123,12 +123,6 @@ p, a, h1, h2, h3, li, span, button, br, b, strong {
 	font-family: sans-serif;
 } // END SANS SERIF EVERYTHING
 
-button {
-	&:focus {
-		background-color: transparent;
-	}
-}
-
 .body-overflow {
 	overflow: hidden;
 }

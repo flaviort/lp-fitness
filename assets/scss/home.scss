@@ -1147,6 +1147,10 @@ body.home {
 						display: block;
 						min-height: 100%;
 					} // END TEXTAREA
+
+					label.error {
+						display: none!important;
+					} // END LABEL / ERROR
 				} // END INPUT FIELD
 
 				.right {
