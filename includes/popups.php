@@ -7,7 +7,7 @@
 		</h2>
 
 		<p class="text-medium desc">
-			Please, fill in the form below with your details and I will get back to you as soon as possible.
+			Please, fill the form below with your details and I will get back to you as soon as possible.
 		</p>
 
 		<!-- FORM -->
@@ -46,7 +46,7 @@
 		</h2>
 
 		<p class="text-medium desc">
-			Please, fill in the form below with your details and I will get back to you as soon as possible.
+			Please, fill the form below with your details and I will get back to you as soon as possible.
 		</p>
 
 		<!-- FORM -->

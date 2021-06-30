@@ -5,12 +5,6 @@
 ----------------------------------------*/
 
 body.home {
-	.body-scroll {
-		overflow: hidden;
-		height: 100%;
-		height: 100vh;
-	} // END BODY OVERFLOW
-
 	#lines {
 		position: fixed;
 		z-index: 0;
@@ -78,13 +72,14 @@ body.home {
 		overflow: visible;
 
 		.bg {
-			background: $black url(../img/banner-top-bg.jpg) center top / cover no-repeat;
+			background: $black;
 			position: absolute;
 			z-index: 0;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: calc(100% - 150px);
+			overflow: hidden;
 
 			@media #{$mq-xxl-max} {
 				height: calc(100% - 130px);
@@ -103,6 +98,44 @@ body.home {
 				height: calc(100% - 40px);
 				//background-image: none;
 			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				z-index: 2;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 50%;
+				background: rgb(17,17,17);
+				background: -moz-linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(17,17,17,0) 100%);
+				background: -webkit-linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(17,17,17,0) 100%);
+				background: linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(17,17,17,0) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#111111",endColorstr="#111111",GradientType=1);
+			} // END AFTER
+
+			video {
+				opacity: 1;
+				position: absolute;
+				z-index: 0;
+				top: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+				display: block;
+				min-width: 100%;
+				max-width: 100%;
+				width: 100%;
+				height: auto;
+
+				@media #{$mq-sm-max} {
+					max-width: none;
+					width: auto;
+					left: auto;
+					transform: none;
+					left: 0;
+					height: 100%;
+				}
+			} // END VIDEO
 		} // END BG
 		
 		.col-12 {
@@ -199,11 +232,15 @@ body.home {
 				position: absolute;
 				z-index: 1;
 				bottom: 0;
-				right: 0;
+				right: 15px;
 				display: block;
 				width: 50%;
 				height: 80%;
 				background: url(../img/banner-top-photo.jpg) center center / cover no-repeat;
+
+				@media #{$mq-md-max} {
+					right: 0;
+				}
 
 				@media #{$mq-sm-max} {
 					height: 85%;
@@ -258,14 +295,10 @@ body.home {
 				display: block;
 				left: 9%;
 				background-color: $pink;
-				top: 75%;
-
-				@media #{$mq-xxl-max} {
-					top: 77%;
-				}
+				top: 85%;
 
 				@media #{$mq-xl-max} {
-					top: 80%;
+					top: 90%;
 					height: 500px;
 				}
 
@@ -403,6 +436,7 @@ body.home {
 					height: 450px;
 					margin-left: -15px;
 					width: calc(100% + 30px);
+					transform: none!important;
 				}
 
 				@media #{$mq-xxs-max} {
